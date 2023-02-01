@@ -58,10 +58,10 @@ console.log("4)---------------------")
 // y lo multiplique x **23** y retorne el resultado. 
 // Usar esta funcion en otra variable y mostrar el resultado con el **console.log**
 
-function multiplicar(pNum) {
+function multiplicar1(pNum) {
     return pNum * 23
 }
-let resultado = multiplicar(numeroRandom)
+let resultado = multiplicar1(numeroRandom)
 console.log(resultado, "es el resltado de multiplicar:", numeroRandom, "por 23")
 
 console.log("4)-Extra---------------")
