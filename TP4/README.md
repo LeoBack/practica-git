@@ -1,20 +1,37 @@
-### TP 3
- 1) Escribir un programa que pida al usuario una palabra y la muestre por pantalla 10 veces.
+### TP 4
+1) Escribir una función a la que se le pase una cadena "nombre" y muestre por pantalla el saludo ¡hola nombre!.
 
- 2) Escribir un programa que pregunte al usuario su edad y muestre por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
+2) Escribir un programa que le pida al usuario que ingrese su nombre apellido edad y muestre un objeto con los datos ingresados.
 
- 3) Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas.
+Ej:
+```json
+{
+  nombre: "",
+  apellido: "",
+  edad: 0
+}
+```
 
- 4) Escribir un programa que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo, de altura el número introducido.
+3) Escribir una funcion que espere dos parámetros, uno de los cuales deberá ser un array, y el otro parámetro debe ser el elemento a buscar en el array. Si lo encuentra debera devoler "Elemento encontrado en la posicion (posición)".
 
-  ```
-  *
-  **
-  ***
-  ****
-  *****
-  ```
+Ej.
+```js
+const miLista1 = [2, "Eric", "Jarra"]
+const miLista2 = ["Leche", "Café", "Chocolate"]
+function buscarElemento() {
+  // aqui defino la funcion
+}
+buscarElemento(miLista1, "Jarra")
+// Esta funcion debe retornar:
+// Elemento encontrado en la posicion 2
+buscarElemento(miLista2, "Café")
+// Esta funcion debe retornar:
+// Elemento encontrado en la posicion 1
+```
 
-  5) Escribir un programa que pida al usuario una palabra y luego muestre por pantalla una a una las letras de la palabra introducida empezando por la última.
+4) Dada un lista o array, escribir un programa que invierta sus elementos.
 
----
+Ej
+```
+ [3,5,7,8]  // ---->  [8,7,5,3]
+```
