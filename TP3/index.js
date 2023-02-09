@@ -15,6 +15,7 @@ function printEdad(pEdad) {
     for (i = 0; i < pEdad;) {
         console.log("Edad # ", ++i)
     }
+    // Otra manera
     //for (i = 1; i < pEdad+1; i++) {
     //    console.log("Edad # ", i)
     //}  
@@ -66,27 +67,19 @@ else {
 console.log("-#4------------------");
 const numEntero = readlineSync.question("Ingrese un numero entero: ")
 
-function asteriscos(pNum) {
-    let result = " "
-    for (i = 0; i < pNum; i++) {
-        result = result + "*"
-    }
-    return result
-} 
-
-function printAsteriscos(pNum) {
+function printTriangulo(pNum) {
     for (i = 0; i < pNum;) {
-        console.log(asteriscos(++i))
+        console.log("*".repeat(++i))
     }
 }
 
-printAsteriscos(numEntero)
+printTriangulo(numEntero)
 
 //5) Escribir un programa que pida al usuario una palabra y luego muestre por pantalla una a una las letras de la palabra introducida empezando por la última.
 console.log("-#5------------------");
 const palabra = readlineSync.question("Ingrese una palabra: ")
 
-function printAsterisco(pPalabra) {
+function printPalabra(pPalabra) {
     let resultPalabra = " "
     for (i = pPalabra.length-1; i >= 0; i--) {
         resultPalabra = resultPalabra + pPalabra[i]
@@ -94,4 +87,4 @@ function printAsterisco(pPalabra) {
     return resultPalabra
 }
 
-console.log(printAsterisco(palabra))
+console.log(printPalabra(palabra))
