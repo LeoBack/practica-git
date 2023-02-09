@@ -1,0 +1,15 @@
+{
+  "name": "tp3",
+  "version": "1.0.0",
+  "description": "1) Escribir una función a la que se le pase una cadena \"nombre\" y muestre por pantalla el saludo ¡hola nombre!.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
