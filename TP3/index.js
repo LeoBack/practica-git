@@ -32,7 +32,7 @@ const esNumeroImpar = (pNum) => (pNum % 2)
 
 function print(pNum) {
     let numeros = ""
-    for (i = 0; i < pNum; i++) {
+    for (i = 0; i <= pNum; i++) {
         if (i === 1) {
             numeros = i
         }
