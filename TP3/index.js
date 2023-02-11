@@ -46,8 +46,8 @@ function print(pNum) {
 
 const num = readlineSync.question("Ingrese un numero entero positivo: ")
 
-if (esEntero(num)) {
-    console.log("El numero no un entero")
+if (!esEntero(num)) {
+    console.log("El numero no es un entero")
 }
 else if (num < 0) {
     console.log("El numero no es positivo")
