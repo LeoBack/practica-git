@@ -1,0 +1,15 @@
+{
+  "name": "tp5",
+  "version": "1.0.0",
+  "description": "1) Dados 2 arrays **[\"Juan\", \"Dani\"]** y **[\"Leo\", \"Monica\", \"Juliana\"]**, escribir una función que concatene \"unifique\" los dos array y devuelva un solo array **[\"Juan\", \"Dani\", \"Leo\", \"Monica\", \"Juliana\"]**.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
