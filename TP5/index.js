@@ -41,11 +41,12 @@ console.log(esVocal(letter));
 // Por ejemplo, generar_caracteres(5,x), debería retornar «xxxxx».
 console.log("\n-#3------------------");
 
-// https://es.stackoverflow.com/questions/230177/validar-solo-letras-en-javascript
 function generar_caracteres(pLetter, pNumberInt) {
-  const pattern = new RegExp('^[A-Z]+$', 'i')  
-  if (pLetter.length == 1 & pattern.test(pLetter)) {
-    if (pNumberInt.indexOf(".") == -1 && pNumberInt.indexOf(",") == -1) {
+  // https://es.stackoverflow.com/questions/230177/validar-solo-letras-en-javascript
+  const pattern = new RegExp("^[A-Z]+$", "i");
+  if ((pLetter.length == 1) & pattern.test(pLetter)) {
+    //if (pNumberInt.indexOf(".") == -1 && pNumberInt.indexOf(",") == -1) {
+    if (pNumberInt.indexOf(".") == -1) {
       const parsed = Number.parseInt(pNumberInt, 10);
       return !Number.isNaN(parsed)
         ? "-> " + pLetter.repeat(pNumberInt)
