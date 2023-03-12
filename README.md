@@ -43,8 +43,6 @@
 
 ---
 
- ---
-
  ### TP 3
  1) Escribir un programa que pida al usuario una palabra y la muestre por pantalla 10 veces.
 
@@ -86,15 +84,19 @@ Ej.
 ```js
 const miLista1 = [2, "Eric", "Jarra"]
 const miLista2 = ["Leche", "Café", "Chocolate"]
+
 function buscarElemento() {
   // aqui defino la funcion
 }
+
 buscarElemento(miLista1, "Jarra")
 // Esta funcion debe retornar:
 // Elemento encontrado en la posicion 2
+
 buscarElemento(miLista2, "Café")
 // Esta funcion debe retornar:
 // Elemento encontrado en la posicion 1
+
 ```
 
 4) Dada un lista o array, escribir un programa que invierta sus elementos.
@@ -103,3 +105,117 @@ Ej
 ```
  [3,5,7,8]  // ---->  [8,7,5,3]
 ```
+
+---
+
+### TP 5
+#### Arrays
+
+1) Dados 2 arrays **["Juan", "Dani"]** y **["Leo", "Monica", "Juliana"]**, escribir una función que concatene "unifique" los dos array y devuelva un solo array **["Juan", "Dani", "Leo", "Monica", "Juliana"]**. 
+
+- Ayuda: Puedes crear un tercer array vacío e ir poniendo los elementos en dicho array.
+
+2) Escriba una función con el nombre de esVocal() que tome un carácter , devuelva True si es vocal (no importa si es mayúscula o minúscula), y devuelva False en caso contrario.
+
+3) Crea una función llamada generar_caracteres() que tome como parámetro un número entero (n) y un carácter, retornar el carácter multiplicado por n. Por ejemplo, generar_caracteres(5,x), debería retornar «xxxxx».
+
+4) Crear una función sumaArreglo() que tome como parámetro un arreglo de números, retornar la suma de todos los números del arreglo.
+
+5) Crea una función llamada numeroMayor() que toma tres números como entrada y retornar el numero mayor de ellos, si son iguales devolver un String «son iguales».
+---
+
+### TP 6
+
+#### Fuente de datos
+
+```js
+// crea una carpeta llamada Tp4 y adentro:
+// crea un archivo llamado dataBase.js y pega lo siguiente.
+
+const dataBase = [
+  {
+    id: 1,
+    nombre: 'Leche',
+    descripcion: 'Leche liquida de 1lt',
+    categoria: 'Lacteos',
+    precio: 180.8 
+  },
+  {
+    id: 3,
+    nombre: 'Queso Tibo',
+    descripcion: 'Queso tibo x 500 grs',
+    categoria: 'Lacteos',
+    precio: 380.4 
+  },
+  {
+    id: 5,
+    nombre: 'Gaseosa CocaCola',
+    descripcion: 'Gaseosa CocaCola x 1 lt',
+    categoria: 'Bebidas',
+    precio: 460.4 
+  },
+  {
+    id: 12,
+    nombre: 'Gaseosa Manaos',
+    descripcion: 'Gaseosa Manaos de Naranja x 2.5 lts',
+    categoria: 'Bebidas',
+    precio: 380.0 
+  },
+  {
+    id: 7,
+    nombre: 'Jugo Cepita Naranja',
+    descripcion: 'Jugo Cepita de naranja x 1 lt',
+    categoria: 'Bebidas',
+    precio: 250.5 
+  },
+  {
+    id: 15,
+    nombre: 'Mani Pehuamar',
+    descripcion: 'Mani salado Pehuamar x 500 grs',
+    categoria: 'Snacks',
+    precio: 300.4 
+  },
+  {
+    id: 8,
+    nombre: 'Papas Lays',
+    descripcion: 'Papas fritas Lays x 500 grs',
+    categoria: 'Snacks',
+    precio: 970.0 
+  },
+  {
+    id: 13,
+    nombre: 'Palitos Salados',
+    descripcion: 'Palitos Salados x 500 grs',
+    categoria: 'Snacks',
+    precio: 210.6 
+  },
+  {
+    id:11,
+    nombre: 'Pipas',
+    descripcion: 'Semillas de Girasol Pipas x 500 grs',
+    categoria: 'Snacks',
+    precio: 340.0 
+  },
+]
+
+module.exports = dataBase
+```
+
+#### Utilizar: **process.argv**
+
+1) En un archivo llamado "busqueda.js", importar el array que se encuentra en dataBase.js y crear una función que acepte como parámetro un id numérico y devuelva el producto correspondiente.
+
+- Ayuda Puedes capturar el id desde terminal, utilizando el process.argv
+
+2) En un archivo llamado "listar.js", importar el array que se encuentra en dataBase.js y crear una función reciba por parámetro una categoría liste los productos de esa categoría.
+
+3) En el archivo creado en el ejercicio 1, llamado busqueda.js, crear otra función que me permita buscar los productos cuyos precios sean menores a un precio que pase por parámetro.
+
+- Ayuda: cuando ejecutes el archivo con node - Ej= node busqueda.js - puedes pasarle el primer argumento por terminal que sera el nombre de la funcion (buscarPorId o buscarPorCategoria) que se debe ejecutar, y el segundo argunmento que sera el parametro que necesita la funcion invocada.
+
+- Ej: node busqueda.js buscarPorId 3
+- Ej: node busqueda.js buscarPorCategoria lacteos
+
+- Ayuda: Puedes exportar las funciones asi ```module.exports = { funcion1, funcion2 }```
+
+4) En un archivo llamado "agregar.js", importar el array que se encuentra en dataBase.js y crear una función que me permita agregar un producto a la lista. Ingresando por parámetros, el id, nombre, descripcion, categoria y precio. mostrarlo en un console.log
