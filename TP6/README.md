@@ -3,7 +3,7 @@
 #### Fuente de datos
 
 ```js
-// crea una carpeta llamada Tp4 y adentro:
+// crea una carpeta llamada Tp6 y adentro:
 // crea un archivo llamado dataBase.js y pega lo siguiente.
 
 const dataBase = [
