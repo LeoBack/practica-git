@@ -1,18 +1,21 @@
 // 1) En un archivo llamado "busqueda.js", importar el array que se encuentra en dataBase.js y crear una función que acepte como parámetro
 // un id numérico y devuelva el producto correspondiente.
 // - Ayuda Puedes capturar el id desde terminal, utilizando el process.argv
-console.log("-#1------------------");
+// console.log("-#1------------------");
 
-const data = require("./dataBase");
+const data = require("../dataBase");
 
-function buscarPorId(pId) {
-  for (i = 0; i < data.length; i++) {
-    if (data[i].id == pId) {
-      return data[i];
-    }
-  }
-  return false;
-}
+// function buscarPorId(pId) {
+//   for (i = 0; i < data.length; i++) {
+//     if (data[i].id == pId) {
+//       return data[i];
+//     }
+//   }
+//   return false;
+// }
+
+const buscarPorId = (pId) => 
+  data.filter((e) => e.id === pId) 
 
 // // MAIN
 // if (process.argv.length == 3) {
@@ -28,31 +31,33 @@ function buscarPorId(pId) {
 // - Ej: node busqueda.js buscarPorId 3
 // - Ej: node busqueda.js buscarPorCategoria lacteos
 // - Ayuda: Puedes exportar las funciones asi ```module.exports = { funcion1, funcion2 }```
-console.log("-#3------------------");
+// console.log("-#3------------------");
 
 const buscarProductosHastaPrecio = (pPrecio) =>
   data.filter((e) => e.precio <= pPrecio);
 
-const msgError =
-  "Ingrese en consola:\n- node busqueda.js buscar 1\n- node busqueda.js precio 300.5";
+// const msgError =
+//   "Ingrese en consola:\n- node busqueda.js buscar 1\n- node busqueda.js precio 300.5";
 
 // MAIN
-if (process.argv.length == 4) {
-  const commnad = process.argv[2];
-  const param1 = process.argv[3];
-  switch (commnad.toLowerCase()) {
-    case "buscar": {
-      console.log(buscarPorId(param1));
-      break;
-    }
-    case "precio": {
-      console.log(buscarProductosHastaPrecio(param1));
-      break;
-    }
-    default: {
-      console.log(msgError);
-    }
-  }
-} else {
-  console.log(msgError);
-}
+// if (process.argv.length == 4) {
+//   const commnad = process.argv[2];
+//   const param1 = process.argv[3];
+//   switch (commnad.toLowerCase()) {
+//     case "buscar": {
+//       console.log(buscarPorId(param1));
+//       break;
+//     }
+//     case "precio": {
+//       console.log(buscarProductosHastaPrecio(param1));
+//       break;
+//     }
+//     default: {
+//       console.log(msgError);
+//     }
+//   }
+// } else {
+//   console.log(msgError);
+// }
+
+module.exports = { buscarPorId, buscarProductosHastaPrecio }

@@ -2,9 +2,11 @@
 // una categoría liste los productos de esa categoría.
 console.log("-#2------------------");
 
-const data = require("./dataBase");
+const readFile = require("./readJSON");
+const writeFile = require("./writeJSON");
 
 function listar(pCategoria) {
+  const data = readFile();
   let listCategoria = new Array();
   for (i = 0; i < data.length; i++) {
     if (data[i].categoria == pCategoria) {
@@ -16,6 +18,7 @@ function listar(pCategoria) {
 
 // Extra
 function listarCategorias() {
+  const data = readFile();
   let listCategoria = new Array();
   for (i = 0; i < data.length; i++) {
     if (listCategoria.indexOf(data[i].categoria) == -1) {
@@ -25,12 +28,4 @@ function listarCategorias() {
   return listCategoria;
 }
 
-// MAIN
-if (process.argv.length == 3) {
-  console.log(listar(process.argv[2]));
-} else {
-  console.log(
-    "Ingrese en consola: node listar.js Lacteos\nCategorias disponibles: " +
-      listarCategorias()
-  );
-}
+module.exports = { listar, listarCategorias};
