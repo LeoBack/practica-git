@@ -25,14 +25,6 @@ function listarCategorias() {
   return listCategoria;
 }
 
-// MAIN
-// if (process.argv.length == 3) {
-//   console.log(listar(process.argv[2]));
-// } else {
-//   console.log(
-//     "Ingrese en consola: node listar.js Lacteos\nCategorias disponibles: " +
-//       listarCategorias()
-//   );
-// }
+// https://matiashernandez.dev/blog/post/4-formas-de-eliminar-elementos-duplicados-en-un-arreglo-con-javascript
 
 module.exports = { listar, listarCategorias};
