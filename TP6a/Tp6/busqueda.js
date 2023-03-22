@@ -6,7 +6,7 @@ const data = require("../dataBase");
 // console.log("-#1------------------");
 
 const buscarPorId = (pId) => 
-  data.filter((e) => e.id === pId) 
+  data.filter((e) => e.id == pId) 
 
 // 3) En el archivo creado en el ejercicio 1, llamado busqueda.js, crear otra función que me permita buscar los productos cuyos precios
 // sean menores a un precio que pase por parámetro.

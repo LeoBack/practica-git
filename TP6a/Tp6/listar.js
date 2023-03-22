@@ -1,6 +1,6 @@
 // 2) En un archivo llamado "listar.js", importar el array que se encuentra en dataBase.js y crear una función reciba por parámetro
 // una categoría liste los productos de esa categoría.
-console.log("-#2------------------");
+// console.log("-#2------------------");
 
 const data = require("../dataBase");
 
@@ -27,4 +27,4 @@ function listarCategorias() {
 
 // https://matiashernandez.dev/blog/post/4-formas-de-eliminar-elementos-duplicados-en-un-arreglo-con-javascript
 
-module.exports = { listar, listarCategorias};
+module.exports = { listar, listarCategorias }
