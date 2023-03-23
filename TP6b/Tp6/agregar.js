@@ -7,17 +7,17 @@ const readFile = require("./readJSON");
 const writeFile = require("./writeJSON");
 
 function agregar(pId, pNombre, pDescripcion, pCategoria, pPrecio) {
-  // // Id se repite
-  // for (i = 0; i < data.length; i++) {
-  //   if (data[i].id == pId) {
-  //     return "El Id se repite";
-  //   }
-  // }
+  const data = readFile();
 
-  // Precio es numero
+  // VALIDACIONES - Precio es numero?
   const parsed = Number.parseFloat(pPrecio);
+  console.log(parsed)
   if (Number.isNaN(parsed)) {
-    return "el precio no es valido";
+    return "El precio no es valido";
+  }
+  // VALIDACIONES - Id se repite?
+  if (data.find((e) => e.id == pId)) {
+    return "El id de producto ya se encontra registrado";
   }
 
   let producto = {
@@ -29,7 +29,6 @@ function agregar(pId, pNombre, pDescripcion, pCategoria, pPrecio) {
   };
 
   try {
-    const data = readFile();
     data.push(producto);
     writeFile(data)
     return data;

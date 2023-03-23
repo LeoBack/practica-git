@@ -1,22 +1,21 @@
-const data = require("../dataBase");
-
 // 4) En un archivo llamado "agregar.js", importar el array que se encuentra en dataBase.js
 // y crear una función que me permita agregar un producto a la lista. Ingresando por parámetros,
 // el id, nombre, descripcion, categoria y precio. mostrarlo en un console.log
 // console.log("-#4------------------");
 
-function agregar(pId, pNombre, pDescripcion, pCategoria, pPrecio) {
-  // // Id se repite
-  // for (i = 0; i < data.length; i++) {
-  //   if (data[i].id == pId) {
-  //     return "El Id se repite";
-  //   }
-  // }
+const data = require("../dataBase");
 
-  // Precio es numero
+function agregar(pId, pNombre, pDescripcion, pCategoria, pPrecio) {
+
+  // VALIDACIONES - Precio es numero?
   const parsed = Number.parseFloat(pPrecio);
+  console.log(parsed)
   if (Number.isNaN(parsed)) {
-    return "el precio no es valido";
+    return "El precio no es valido";
+  }
+  // VALIDACIONES - Id se repite?
+  if (data.find((e) => e.id == pId)) {
+    return "El id de producto ya se encontra registrado";
   }
 
   let producto = {

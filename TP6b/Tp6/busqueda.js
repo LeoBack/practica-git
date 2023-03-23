@@ -4,20 +4,10 @@
 // console.log("-#1------------------");
 
 const readFile = require("./readJSON");
+const data = readFile();
 
-// function buscarPorId(pId) {
-//   for (i = 0; i < data.length; i++) {
-//     if (data[i].id == pId) {
-//       return data[i];
-//     }
-//   }
-//   return false;
-// }
-
-const buscarPorId = (pId) => { 
-  const data = readFile();
-  return data.filter((e) => e.id === pId) 
-}
+const buscarPorId = (pId) =>
+  data.filter((e) => e.id == pId) 
 
 // 3) En el archivo creado en el ejercicio 1, llamado busqueda.js, crear otra función que me permita buscar los productos cuyos precios
 // sean menores a un precio que pase por parámetro.
@@ -28,9 +18,7 @@ const buscarPorId = (pId) => {
 // - Ayuda: Puedes exportar las funciones asi ```module.exports = { funcion1, funcion2 }```
 // console.log("-#3------------------");
 
-const buscarProductosHastaPrecio = (pPrecio) => { 
-  const data = readFile();
-  return data.filter((e) => e.precio <= pPrecio);
-}
+const buscarProductosHastaPrecio = (pPrecio) => 
+  data.filter((e) => e.precio <= pPrecio);
 
 module.exports = { buscarPorId, buscarProductosHastaPrecio }

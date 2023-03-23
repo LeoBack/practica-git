@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const filePath = path.join(__dirname, "..", "tasksData.json");
+const filePath = path.join(__dirname, "..", "dataBase.json");
 // console.log(filePath + "\n")
 const data = fs.readFileSync(filePath, "utf8");
 const dataParsed = JSON.parse(data);

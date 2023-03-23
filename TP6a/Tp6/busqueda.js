@@ -1,9 +1,9 @@
-const data = require("../dataBase");
-
 // 1) En un archivo llamado "busqueda.js", importar el array que se encuentra en dataBase.js y crear una función que acepte como parámetro
 // un id numérico y devuelva el producto correspondiente.
 // - Ayuda Puedes capturar el id desde terminal, utilizando el process.argv
 // console.log("-#1------------------");
+
+const data = require("../dataBase");
 
 const buscarPorId = (pId) => 
   data.filter((e) => e.id == pId) 
