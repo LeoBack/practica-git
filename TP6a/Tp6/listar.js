@@ -4,15 +4,16 @@
 
 const data = require("../dataBase");
 
-function listar(pCategoria) {
-  let listCategoria = new Array();
-  for (i = 0; i < data.length; i++) {
-    if (data[i].categoria == pCategoria) {
-      listCategoria.push(data[i]);
-    }
-  }
-  return listCategoria;
-}
+// function listar(pCategoria) {
+//   let listCategoria = new Array();
+//   for (i = 0; i < data.length; i++) {
+//     if (data[i].categoria == pCategoria) {
+//       listCategoria.push(data[i]);
+//     }
+//   }
+//   return listCategoria;
+// }
+const listar = (pCategoria) => data.filter((e) => e.categoria === pCategoria);
 
 // Extra
 function listarCategorias() {
@@ -25,6 +26,4 @@ function listarCategorias() {
   return listCategoria;
 }
 
-// https://matiashernandez.dev/blog/post/4-formas-de-eliminar-elementos-duplicados-en-un-arreglo-con-javascript
-
-module.exports = { listar, listarCategorias }
+module.exports = { listar, listarCategorias };

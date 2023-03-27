@@ -6,10 +6,9 @@
 const data = require("../dataBase");
 
 function agregar(pId, pNombre, pDescripcion, pCategoria, pPrecio) {
-
   // VALIDACIONES - Precio es numero?
   const parsed = Number.parseFloat(pPrecio);
-  console.log(parsed)
+  console.log(parsed);
   if (Number.isNaN(parsed)) {
     return "El precio no es valido";
   }

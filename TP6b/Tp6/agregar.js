@@ -11,7 +11,7 @@ function agregar(pId, pNombre, pDescripcion, pCategoria, pPrecio) {
 
   // VALIDACIONES - Precio es numero?
   const parsed = Number.parseFloat(pPrecio);
-  console.log(parsed)
+  console.log(parsed);
   if (Number.isNaN(parsed)) {
     return "El precio no es valido";
   }
@@ -30,12 +30,11 @@ function agregar(pId, pNombre, pDescripcion, pCategoria, pPrecio) {
 
   try {
     data.push(producto);
-    writeFile(data)
+    writeFile(data);
     return data;
   } catch (excepcion) {
     return "Fail";
   }
-
 }
 
 module.exports = agregar;

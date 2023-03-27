@@ -5,7 +5,7 @@
 const readFile = require("./readJSON");
 const data = readFile();
 
-const listar = (pCategoria) => data.filter((e) => e.categoria === pCategoria)
+const listar = (pCategoria) => data.filter((e) => e.categoria === pCategoria);
 
 // Extra
 function listarCategorias() {
@@ -18,5 +18,8 @@ function listarCategorias() {
   return listCategoria;
 }
 
+// function listarCategorias() {
+//   return data.filter((val, ind, arr) => arr.indexOf(val) === ind);
+// }
 
-module.exports = { listar, listarCategorias};
+module.exports = { listar, listarCategorias };
