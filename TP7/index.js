@@ -297,7 +297,7 @@ const capitalizarA = (vVal) => {
   let a = vVal.split(" ");
   let word = "";
   for (i = 0; i < a.length; i++) {
-    word = word + a[i].charAt(0).toUpperCase() + a[i].slice(1) + " "
+    word = word + a[i].charAt(0).toUpperCase() + a[i].slice(1) + " ";
   }
   return word;
 };
@@ -307,12 +307,20 @@ console.log(capitalizarA("hola mundo")); // "Hola Mundo"
 console.log(capitalizarA("make it real")); // "Make It Real"
 console.log(capitalizarA("")); // ""
 
-/*
 console.log("-#18-Encontrar el número máximo-----------------");
 // Escribir una función llamada `max` que reciba un arreglo de números y retorne el número máximo:
 // **Nota:** Intentarlo hacer sin el método `Math.max` de JavaScript.
 
 // escribe tu función acá
+function max(vNumeros) {
+  let nMax = vNumeros[0];
+  for (i = 0; i < vNumeros.length; i++) {
+    if (nMax <= vNumeros[i]) {
+      nMax = vNumeros[i];
+    }
+  }
+  return nMax;
+}
 
 // código de prueba
 console.log(max([3, 9, 6])); // 9
@@ -324,12 +332,19 @@ console.log("-#19-Encontrar el número mínimo-----------------");
 // **Nota:** Intentarlo hacer sin el método `Math.min` de JavaScript.
 
 // escribe tu función acá
-
+function min(vNumeros) {
+  let nMin = vNumeros[0];
+  for (i = 0; i < vNumeros.length; i++) {
+    if (nMin >= vNumeros[i]) {
+      nMin = vNumeros[i];
+    }
+  }
+  return nMin;
+}
 // código de prueba
 console.log(min([3, 9, 6])); // 3
 console.log(min([67, 35, 54, 26])); // 26
 console.log(min([5, 9, 2, 4, 5, 7])); // 2
-
 
 console.log("-#20-Generar contraseña-----------------");
 // Escribir una función llamada `password` que reciba un string y retorne un nuevo string realizando los siguientes cambios:
@@ -341,22 +356,53 @@ console.log("-#20-Generar contraseña-----------------");
 // - Reemplaza el carater “o” por “0”.
 
 // escribe tu función acá
+function password(vVal) {
+  let newVal = "";
+  for (i = 0; i < vVal.length; i++) {
+    let temp = "";
+    switch (vVal.charAt(i).toLowerCase()) {
+      case "a":
+        temp = "4";
+        break;
+      case "e":
+        temp = "3";
+        break;
+      case "i":
+        temp = "1";
+        break;
+      case "o":
+        temp = "0";
+        break;
+      default:
+        temp = vVal.charAt(i);
+        break;
+    }
+
+    newVal =
+      temp == temp.toUpperCase()
+        ? newVal + temp.toLowerCase()
+        : (newVal = newVal + temp);
+  }
+  return newVal;
+}
 
 // código de prueba
 console.log(password("hola")); // "h0l4"
-console.log(password("esta es una prueba")); // "3st43sun4pru3b4"
+console.log(password("eSta es una prueba")); // "3st43sun4pru3b4"
 console.log(password("")); // ""
+
 
 console.log("-#21-Encontrar números pares en un arreglo-----------------");
 // Escribir una función llamada `pares` que reciba un arreglo de números y retorne un nuevo arreglo con los números pares únicamente.
 
 // escribe tu función acá
+const pares = (vNumeros) => vNumeros.filter((vNumero) => (vNumero % 2) == 0);
 
 // código de prueba
 console.log(pares([1, 2, 3, 4, 5, 6])); // [2, 4, 6]
 console.log(pares([])); // []
 
-
+/*
 console.log("-#22-Encontrar posiciones de números pares-----------------");
 // Escribir una función llamada `posiciones` que reciba un arreglo de números y retorne un nuevo arreglo **con las posiciones** donde se encuentran números pares.
 
